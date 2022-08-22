@@ -38,7 +38,7 @@ jobs:
     - name: Tar bz2 [LINUX-x64]
       run: |
         cd ProjectSolution/Project/bin/Release/net6.0/linux-x64/publish
-        tar -cfj ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.bz2 *
+        tar -cfj ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.bz2 ProjectSolution/Project/bin/Release/net6.0/linux-x64/publish
         
     - uses: dev-drprasad/delete-older-releases@v0.2.0
       with:
