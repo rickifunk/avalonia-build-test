@@ -37,7 +37,7 @@ jobs:
         
     - name: Tar bz2 [LINUX-x64]
       run: |
-        tar -cfj ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.bz2 ProjectSolution/Project/bin/Release/net6.0/linux-x64/publish
+        tar -czvf ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.gz ProjectSolution/Project/bin/Release/net6.0/linux-x64/publish
         
     - uses: dev-drprasad/delete-older-releases@v0.2.0
       with:
@@ -73,6 +73,6 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.bz2
+        asset_path: ProjectSolution/Project/bin/Release/net6.0/linux-x64/linux-x64.tar.gz
         asset_name: linux-x64.tar.bz2
         asset_content_type: application/bzip2
